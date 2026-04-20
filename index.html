@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+        <option value="0">なし</option>
+        <option value="9000">レベル1</option>
+        <option value="18000">レベル2</option>
+        <option value="27000">レベル3</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>サスペンション</label>
+      <select id="suspension">
+        <option value="0">なし</option>
+        <option value="7000">レベル1</option>
+        <option value="14000">レベル2</option>
+        <option value="21000">レベル3</option>
+        <option value="28000">レベル4</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ターボ</label>
+      <select id="turbo">
+        <option value="0">なし</option>
+        <option value="25000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ニトロ</label>
+      <select id="nitro">
+        <option value="0">なし</option>
+        <option value="30000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>アーマー</label>
+      <select id="armor">
+        <option value="0">なし</option>
+        <option value="20000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ハーネス</label>
+      <select id="harness">
+        <option value="0">なし</option>
+        <option value="15000">あり</option>
+      </select>
+    </div>
+
+    <button onclick="calculateTotal()">合計金額を計算</button>
+
+    <div class="result" id="result">
+      合計金額：¥0
+    </div>
+  </div>
+
+  <script>
+    function calculateTotal() {
+      const ids = [
+        'engine',
+        'brakes',
+        'transmission',
+        'suspension',
+        'turbo',
+        'nitro',
+        'armor',
+        'harness'
+      ];
+
+      let total = 0;
+
+      ids.forEach(id => {
+        total += Number(document.getElementById(id).value);
+      });
+
+      const colorType = document.getElementById('colorType').value;
+
+      // 黒の場合は+5000、白はそのまま
+      if (colorType === 'black') {
+        total += 5000;
+      }
+
+      document.getElementById('result').innerText =
+        `合計金額：¥${total.toLocaleString()}`;
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+        <option value="0">なし</option>
+        <option value="9000">レベル1</option>
+        <option value="18000">レベル2</option>
+        <option value="27000">レベル3</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>サスペンション</label>
+      <select id="suspension">
+        <option value="0">なし</option>
+        <option value="7000">レベル1</option>
+        <option value="14000">レベル2</option>
+        <option value="21000">レベル3</option>
+        <option value="28000">レベル4</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ターボ</label>
+      <select id="turbo">
+        <option value="0">なし</option>
+        <option value="25000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ニトロ</label>
+      <select id="nitro">
+        <option value="0">なし</option>
+        <option value="30000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>アーマー</label>
+      <select id="armor">
+        <option value="0">なし</option>
+        <option value="20000">あり</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>ハーネス</label>
+      <select id="harness">
+        <option value="0">なし</option>
+        <option value="15000">あり</option>
+      </select>
+    </div>
+
+    <button onclick="calculateTotal()">合計金額を計算</button>
+
+    <div class="result" id="result">
+      合計金額：¥0
+    </div>
+  </div>
+
+  <script>
+    function calculateTotal() {
+      const ids = [
+        'engine',
+        'brakes',
+        'transmission',
+        'suspension',
+        'turbo',
+        'nitro',
+        'armor',
+        'harness'
+      ];
+
+      let total = 0;
+
+      ids.forEach(id => {
+        total += Number(document.getElementById(id).value);
+      });
+
+      const colorType = document.getElementById('colorType').value;
+
+      // 黒の場合は+5000、白はそのまま
+      if (colorType === 'black') {
+        total += 5000;
+      }
+
+      document.getElementById('result').innerText =
+        `合計金額：¥${total.toLocaleString()}`;
+    }
+  </script>
+</body>
+</html>
